@@ -1,0 +1,166 @@
+body{
+    background-color: black;
+    font-size: 1.2rem;
+    color: #a5a5a5;
+    line-height: 1.5;
+    /* background-image: url("background.png"); */
+    background: linear-gradient(150deg, #250031, #005163);
+
+}
+
+.container {
+    display: grid;
+    gap: 20px 20px;
+    /* min-height: 80%; */
+    width: 85%;
+    
+    /* grid-template-columns: auto auto auto auto auto; */
+    grid-template-columns: auto auto;
+
+    /* grid-template-rows: 7vh 1fr 7vh; setti 1fr til að fylla út restina af gridinu */
+    grid-template-rows: auto auto auto; 
+    /* setti 1fr til að fylla út restina af gridinu */
+    margin: 2rem auto;
+
+    background-color: #1c1c1c;
+    /* padding: 2vw 2vw 2vw; */
+    border-radius: 8px;
+    border: 0.5px solid rgb(77, 0, 0);
+}
+
+
+
+.header{
+    /* height:20%; */
+    /* padding: 0px 0px 0px 0px; */
+    grid-column-start: 1;
+    grid-column-end: 1;
+    /* border: 3px solid rgb(77, 0, 0); */
+
+}
+
+.navigation{  
+    /* height: auto; */
+    /* height:20%; */
+
+    grid-column-start: 2;
+    grid-column-end: 2;
+    /* border: 3px solid rgb(77, 0, 0); */
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    /* z-index: 1; */
+    border-bottom: 2px solid #ccc;
+}
+
+
+.side-navigation{
+    /* position: relative; */
+    min-width: 10rem;
+    /* border: 0.5px solid rgb(77, 0, 0); */
+    height:fit-content;
+    /* float: left; - veit ekki hvað þetta gerir, tók út*/
+    /* grid-column-start: 1;
+    grid-column-end: 1; */
+    color: #a5a5a5;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    /* position: fixed; þetta fer alltaf í overlap á grid-ið ef ég nota fixed*/
+    position: sticky;
+    top: 1rem;
+    /* background-color: rgb(46, 46, 46); */
+    margin: 0px;
+    /* padding: 1.5rem 5rem 1.5rem 0rem; */
+    /* padding: 0px; */
+    /* border-radius: 7px; */
+}
+
+.side-navigation-ul{
+    list-style: none;
+    padding: 0px;
+}
+.side-navigation li{
+    float: none; 
+    width: 100%;
+}
+
+.side-navigation li a{
+    display: block; 
+    width: 100%; 
+    padding: 20px; 
+    border-left: 5px solid; 
+    position: relative; 
+    z-index: 1;
+    text-decoration: none;
+    color: #df00f3;
+    font-weight: 700;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+}
+
+
+.side-navigation li a:hover{ border-bottom: 0px; color: #9c006d;}
+.side-navigation li:first-child a{ border-left: 10px solid #031430; }
+.side-navigation li:nth-child(2) a{ border-left: 10px solid #4f3500; }
+.side-navigation li:nth-child(3) a{ border-left: 10px solid #031430; }
+.side-navigation li:last-child a{ border-left: 10px solid #4f3500; }
+
+.side-navigation li a:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 0.1s ease 0s; 
+  -webkit-transition: all 0.2s ease 0s; 
+  z-index: -1;
+}
+
+.side-navigation li a:hover:after{ width: 100%; }
+.side-navigation li:first-child a:after{ background: linear-gradient(to right, #031430, transparent); }
+.side-navigation li:nth-child(2) a:after{ background: linear-gradient(to right, #4f3500, transparent) ; }
+.side-navigation li:nth-child(3) a:after{ background: linear-gradient(to right, #031430, transparent); }
+.side-navigation li:nth-child(4) a:after{ background: linear-gradient(to right, #4f3500, transparent); }
+.side-navigation li:nth-child(5) a:after{ background: linear-gradient(to right, #031430, transparent); }
+.side-navigation li:last-child a:after{ background: linear-gradient(to right, #4f3500, transparent); }
+
+
+
+.content{
+    min-width: 50rem;
+    margin: 1rem;;
+    /* Ef ég vill hafa containerinn bara fyllt út í síðuna, contentið scrollar svo niður 
+    height: 70vh;
+    overflow: auto;
+    */
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border: 0.5px solid rgb(77, 0, 0);
+}
+
+.footer{
+    border: 3px solid rgb(77, 0, 0);
+    grid-column: 1/6;
+
+}
+
+/* 
+ responsive styling 
+@media screen and (max-width: 800px) {
+    .container {
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 7vh 71vh 7vh;
+    }
+    .side-navigation{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display:hidden;
+    }
+    .content{
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+}
+*/
