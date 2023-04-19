@@ -1,0 +1,9 @@
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(150deg, #de7aff, #62a9b9);
+}
