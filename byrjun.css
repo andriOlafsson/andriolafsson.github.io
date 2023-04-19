@@ -4,7 +4,8 @@ body{
     color: #a5a5a5;
     line-height: 1.5;
     /* background-image: url("background.png"); */
-    background: linear-gradient(150deg, #250031, #005163);
+    /* background: linear-gradient(150deg, #250031, #005163); */
+    background: linear-gradient(150deg, #de7aff, #62a9b9);
 
 }
 
