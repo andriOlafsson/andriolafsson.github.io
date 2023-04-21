@@ -5,5 +5,12 @@ body {
   width: 100%;
   font-family: "Poppins", sans-serif;
   place-items: center;
-  background: linear-gradient(150deg, #de7aff, #62a9b9);
+  overflow: hidden;
+  -webkit-animation: bg-anim 15s ease infinite;
+          animation: bg-anim 15s ease infinite;
+  background-image: linear-gradient(-45deg, #4571d8, #21586f, #666b7a, #2b5ea5);
+   background-size: 400% 400%;
+    /*      background-image: linear-gradient(-45deg, #4571d8, #21586f, #666b7a, #2b5ea5); */
+          
+          /* background: linear-gradient(150deg, #de7aff, #62a9b9); */
 }

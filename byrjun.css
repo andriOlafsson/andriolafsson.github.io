@@ -1,32 +1,71 @@
-body{
-    background-color: black;
+body, html{
+    /* background-color: black; */
     font-size: 1.2rem;
     color: #a5a5a5;
-    line-height: 1.5;
-    /* background-image: url("background.png"); */
+    line-height: 1.2;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0;
     /* background: linear-gradient(150deg, #250031, #005163); */
-    background: linear-gradient(150deg, #de7aff, #62a9b9);
+    /* background: linear-gradient(150deg, #c925ff, #197f96); */
+    /* background-size: 400%; */
+    /* animation: color 9s infinite linear; */
 
 }
 
+  
+.bg {
+    
+    width: 100%;
+    height: 100%;
+    background-size: 400% 400%;
+    background-image: linear-gradient(150deg, #7f0aa7 0%, #197f96 25%, #7f0aa7 51%, #197f96 100%);
+    -webkit-animation: AnimateBG 30s ease infinite;
+            animation: AnimateBG 30s ease infinite;
+  }
+
+
+@-webkit-keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+@keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
 .container {
     display: grid;
     gap: 20px 20px;
     /* min-height: 80%; */
     width: 85%;
     
-    /* grid-template-columns: auto auto auto auto auto; */
     grid-template-columns: auto auto;
 
-    /* grid-template-rows: 7vh 1fr 7vh; setti 1fr til að fylla út restina af gridinu */
     grid-template-rows: auto auto auto; 
-    /* setti 1fr til að fylla út restina af gridinu */
-    margin: 2rem auto;
-
+    /* margin: 2rem auto; */
+    margin:auto auto;
     background-color: #1c1c1c;
-    /* padding: 2vw 2vw 2vw; */
+    padding: 2vw 2vw 2vw;
     border-radius: 8px;
-    border: 0.5px solid rgb(77, 0, 0);
+    border: 0.5px solid rgb(252, 0, 0);
 }
 
 
